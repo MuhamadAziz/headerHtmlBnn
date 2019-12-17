@@ -1,0 +1,296 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <title>Cara termudah untuk Membuat Header Responsif</title>
+  <style>
+      #mobile-nav {
+      display: none;
+    }
+    .dropdown-li {
+      font-size: 10px;
+      width: 136px!important;
+      color: orange!important;
+      border-bottom: 1px solid black;
+    }
+    .dropdown-li-a{
+      width: 136px!important;
+
+      color: orange!important;
+    }
+    .dropdown-li:hover{
+      width: 136px!important;
+
+      background-color: gray;
+      
+    }
+    header{
+      /* Enable flex mode. */
+      display: flex!important;
+      /* Spread out the elements inside the header. */
+      justify-content: space-between;
+      /* Align items vertically in the center. */
+      align-items: center;
+      padding: 40px 0px;
+      color: black;
+      font-size: 13px;
+    }
+    .header-left{
+      font: normal 28px 'Fugaz One', cursive;
+    }
+    .header-left img{
+      color: #EAD314;
+    }
+    .header-center ul{
+      list-style: none;
+    }
+    .header-center ul li{
+      display: inline-block;
+      width: 87px;
+    }
+    .header-center ul li a{
+      text-decoration: none;
+      color: blue;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .header-right button{
+        color: #fff;
+        cursor: pointer;
+        font-weight: 800;
+        text-transform: uppercase;
+        padding: 12px 30px;
+        border: 2px solid #FFFFFF;
+        border-radius: 4px;
+        background-color: transparent;
+    }
+    .header-right button:hover {
+        background-color: rgba(255,255,255,0.1);
+    }
+    /*  Media queries  */
+    @media (max-width: 1200px){
+      header{
+        padding: 40px 0px;
+      }
+    }
+    @media (max-width: 1000px){
+      header{
+        /* Reverse the axis of the header, making it vertical. */
+        flex-direction: column;
+        /* Align items to the begining (the left) of the header. */
+        align-items: flex-start;
+      }
+      header > div{
+        margin: 12px 0;
+      }
+      .header-center ul li{
+      }
+      #mobile-nav {
+      display: contents;
+      text-align: center;
+      }
+      .navigation .nav {
+        display: none;
+      }
+    }
+    @media (max-width: 600px){
+    
+      .header-left{
+        margin-top:0;
+      }
+      header {
+          padding: 30px;
+      }
+      #mobile-nav {
+        display: contents;
+        text-align: center;
+        }
+      .navigation .nav {
+        display: none;
+      }
+    }
+    /* Landscape phones and down */
+@media (max-width: 480px) {
+	.logo, .navigation {text-align: center;}
+	.row.header {margin-bottom: 30px;}
+	.logo h5 {display: block;}
+  .navigation .nav {
+    display: none;
+  }
+  .mobile-nav-select {
+    text-align: center;
+  }
+  .responsive-text{
+    margin-top: 10px;
+    margin-left: 0px!important;
+    text-align: center;
+  }
+  .header-left-1{
+    flex-direction: column!important;
+  }
+  #mobile-nav {
+    display: contents;
+    text-align: center;
+    }
+  
+}
+a {
+  text-decoration: none;
+}
+
+nav {
+    font-family: monospace;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+li {
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+  transition-duration: 0.5s;
+}
+  
+li a {
+  color: #fff;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+ul li ul {
+    visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+    position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+    left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+    clear: both;
+  width: 100%;
+}
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body >
+  <div style="background-color: blue;width: 100%;height:20px; color:white; font-size:11px"><marquee direction="left" behavior="ALTERNATE" class="responsive-marquee" style="width: 30%" onmouseover="this.stop()" scrollamount="2" onmouseout="this.start()">
+
+    &nbsp :: Selamat Datang di Website Resmi Pusat Laboratorium Narkotika BNN ::</marquee></div>
+
+   <div style="background-color: orange!important;width: 100%; height: 2px;"></div>
+<div class="container">
+ 
+   <div class="col-md-12">
+      <header>
+        <div class="header-left">
+          <div style="display: flex;  flex-direction: row; align-items: center;" class="header-left-1">
+            <img src="https://laboratorium.bnn.go.id/assets/image/icon_bnn.png" width="85px" height="85px">
+            <h5 class="responsive-text" style="font-family:tahoma;font-size: 14px;margin-left: 20px;">I N F O  &nbsp;  P E L A Y A N A N <br>LABORATORIUM NARKOTIKA BNN</h5>
+          </div>
+        </div>
+        <div class="header-center navigation" style="height: 55px;">
+          <ul class="nav" style="font-size:14px;">
+            <li><a href="#" style="text-decoration: none;
+              background-color: transparent; font-weight: unset; font-family:tahoma;">Beranda</a></li>
+            <li><a href="#" style="text-decoration: none;
+              background-color: transparent; font-weight: unset; font-family:tahoma;">Profile
+              <ul class="dropdown">
+                <li class="dropdown-li"><a href="#" class="dropdown-li-a">Visi Misi</a></li  >
+                <li class="dropdown-li"><a href="#" class="dropdown-li-a">Struktur Organisasi</a></li>
+                <li class="dropdown-li"><a href="#" class="dropdown-li-a">Sejarah</a></li>
+                <li class="dropdown-li"><a href="#" class="dropdown-li-a">Kontak</a></li>
+              </ul>
+            </a></li>
+                
+            <li><a href="#" style="text-decoration: none;
+              background-color: transparent; font-weight: unset; font-family:tahoma;">Informasi
+                <ul class="dropdown">
+                  <li class="dropdown-li"><a href="#" class="dropdown-li-a">NPS Alert System</a></li  >
+                  <li class="dropdown-li"><a href="#" class="dropdown-li-a">Urine Screening System</a></li>
+                  <li class="dropdown-li"><a href="#" class="dropdown-li-a">Berita Kegiatan</a></li>
+                  <li class="dropdown-li"><a href="#" class="dropdown-li-a">Kegiatan Rutin</a></li>
+                </ul>
+            </a></li>
+            <li><a href="#" style="text-decoration: none;
+              background-color: transparent; font-weight: unset; font-family:tahoma;">Pelayanan
+                <ul class="dropdown">
+                  <li class="dropdown-li"><a href="#" class="dropdown-li-a">Daftar Layanan Lab</a></li  >
+                  <li class="dropdown-li"><a href="#" class="dropdown-li-a">Persyaratan Pro Justitia</a></li>
+                  <li class="dropdown-li"><a href="#" class="dropdown-li-a">Bertkas Pro Justitia</a></li>
+                  <li class="dropdown-li"><a href="#" class="dropdown-li-a">Konsultasi dan Pengaduan</a></li>
+                </ul>
+            </a></li>
+            <li><a href="#" style="text-decoration: none;
+              background-color: transparent; font-weight: unset; font-family:tahoma;">Integritas
+                <ul class="dropdown">
+                  <li class="dropdown-li"><a href="#" class="dropdown-li-a">Whistle Blowing</a></li  >
+                  <li class="dropdown-li"><a href="#" class="dropdown-li-a">Pengendalian Gratifikasi</a></li>
+                  <li class="dropdown-li"><a href="#" class="dropdown-li-a">Benturan Kepentingan</a></li>
+                </ul>
+            </a></li>
+            <li><a href="#" style="text-decoration: none;
+              background-color: transparent; font-weight: unset; font-family:tahoma;">Statistik
+              <ul class="dropdown">
+                <li class="dropdown-li"><a href="#" class="dropdown-li-a">Data Statistik</a></li>
+                <li class="dropdown-li"><a href="#" class="dropdown-li-a">Indeks Kepuasan</a></li>
+              </ul>
+            
+            </a></li>
+            <li><a href="#" style="text-decoration: none;
+              background-color: transparent; font-weight: unset; font-family:tahoma;">Login</a></li>
+          </ul>
+        </div>
+      </header>
+     
+      <form action="#" id="mobile-nav" class="visible-phone">
+        <div class="mobile-nav-select">
+        <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+            <font face="tahoma">
+<option value="#">Navigate...</option>
+            <option value="<?php echo site_url("home");?>">Beranda</option>
+            <option value="#">Tentang</option>
+                <option value="<?php echo site_url("home/kontak");?>">- Kontak Kami</option>
+                <option value="<?php echo site_url("home/struktur");?>">- Struktur Organisasi</option>
+                <option value="<?php echo site_url("home/visimisi");?>">- Visi dan Misi</option>
+<option value="<?php echo site_url("home/sejarah");?>">- Sejarah</option>
+            <option value="#">Informasi</option>
+                <!--<option value="<?php echo site_url() . "nps_alert_system/1.indek.php";?>">- NPS Alert System</option>-->
+<option value="https://laboratorium.bnn.go.id/Home/Zat_NPS">- NPS Alert System</option>
+                <option value="<?php echo site_url() . "urine_screening_system/1. Index.php";?>">- Urine Screening System</option>
+            <option value="#">Pelayanan Lab </option>
+                <!-- <option value="<?php echo site_url("home/saran");?>">- Konsultasi dan Pengaduan</option> -->
+<option value="https://laboratorium.bnn.go.id/Home/Konsultasi_Pengaduan">- Konsultasi dan Pengaduan</option> 
+                
+
+</font>
+</select>
+</div>
+
+</form>
+   </div>
+
+ 
+</div>
+</body>
+</html>
